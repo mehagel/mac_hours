@@ -1,0 +1,6 @@
+<%= form_for @daily_hour do |f| %>
+<%= f.text_field :hours, :placeholder=>'hours'%>
+<%= f.submit 'Add Hours'%>
+<% end %>
+
+<%=link_to('Show me hours', daily_hours_path )%>
