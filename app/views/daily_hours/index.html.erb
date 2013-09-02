@@ -1,15 +1,14 @@
 <%= link_to( "Add Daily Hours"  , new_daily_hour_path) %>
 
-<h4>Days left in the month:<%=@days%></h4>
-<h4>Number of hours left:<%=@hours_left%></h4>
-<h4>Average Hours left:<%=@avg_hours%></h4>
+<h4>Days left in the month: <%=@days%></h4>
+<h4>Number of hours left: <%=@hours_left%></h4>
+<h4>Average Hours left: <%=@avg_hours%></h4>
 
 
-<h4>Total Hours:<%= @total_hours %></h4>
+<h4>Total Hours: <%= @total_hours %></h4>
 
 
-<ul>
+<h3>History</h3>
 <% @all_hours.each do |daily| %>
-<li><%= daily.hours %></li>
+	<p><%= convert_date(daily.date) %> <%= daily.hours %> Hours</p>
 <%end %>
-</ul>

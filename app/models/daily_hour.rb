@@ -1,5 +1,5 @@
 class DailyHour < ActiveRecord::Base
-	attr_accessible :hours
+	attr_accessible :hours, :date
 
 
 	def self.total_hours
