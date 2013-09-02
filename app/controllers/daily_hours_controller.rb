@@ -1,5 +1,7 @@
 class DailyHoursController < ApplicationController
 
+	before_filter :authenticate_user!
+
 	def index
 		@all_hours=DailyHour.all
 		@total_hours = DailyHour.total_hours
@@ -8,22 +10,12 @@ class DailyHoursController < ApplicationController
 		@avg_hours = DailyHour.avg_hours
 	end
 
-	def show
-	
-	end
-
-
 	def new
 		@daily_hour = DailyHour.new
 	end
-
-
-
 
 	def create
 		DailyHour.create(params[:daily_hour])
 		redirect_to daily_hours_path
 	end
-
-
 end

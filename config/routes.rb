@@ -1,5 +1,7 @@
 MacHours::Application.routes.draw do
 
+  devise_for :users
+
   root to: "daily_hours#index"
   resources :daily_hours
 
