@@ -8,6 +8,7 @@ class DailyHoursController < ApplicationController
 		@days = DailyHour.days_left_in_month
 		@hours_left = DailyHour.hours_left_to_work
 		@avg_hours = DailyHour.avg_hours
+		@money_made = DailyHour.money_made
 	end
 
 	def new

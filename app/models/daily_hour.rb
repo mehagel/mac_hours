@@ -22,5 +22,8 @@ class DailyHour < ActiveRecord::Base
 		hours_left_to_work / (days_left_in_month).to_f
 	end
 
+	def self.money_made
+		"$#{DailyHour.total_hours * 30}.00"
+	end
 
 end
